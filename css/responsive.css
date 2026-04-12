@@ -1,0 +1,216 @@
+/* ============================================
+   syn. — Responsive Styles
+   ============================================ */
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .hex-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .sourcing-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .story__layout {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+
+    .story__visual {
+        min-height: 300px;
+    }
+
+    .footer__top {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .hero__prism {
+        width: 35%;
+        opacity: 0.7;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    /* Hide custom cursor on touch devices */
+    .cursor-dot,
+    .cursor-ring {
+        display: none !important;
+    }
+
+    html, body, a, button {
+        cursor: auto !important;
+    }
+
+    /* Nav */
+    .nav__links {
+        display: none;
+    }
+
+    .nav__hamburger {
+        display: flex;
+    }
+
+    .theme-toggle {
+        right: 64px;
+        top: 14px;
+        width: 38px;
+        height: 38px;
+    }
+
+    /* Hero */
+    .hero {
+        flex-direction: column;
+        padding: 100px 24px 60px;
+        min-height: 100vh;
+        justify-content: center;
+    }
+
+    .hero__prism {
+        position: relative;
+        right: auto;
+        top: auto;
+        transform: none;
+        width: 100%;
+        height: 250px;
+        margin-top: 40px;
+        opacity: 0.8;
+    }
+
+    .hero__scroll {
+        display: none;
+    }
+
+    .hero__title {
+        font-size: 2.4rem;
+    }
+
+    .hero__buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero__dots {
+        gap: 8px;
+    }
+
+    .hero__dot {
+        width: 18px;
+        height: 18px;
+    }
+
+    /* Hex Grid */
+    .hex-grid {
+        grid-template-columns: 1fr;
+        max-width: 340px;
+        margin: 0 auto;
+    }
+
+    /* Explorer */
+    .explorer {
+        flex-direction: column;
+    }
+
+    .explorer__sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        padding: 32px 24px 20px;
+        border-right: none;
+        border-bottom: 1px solid rgba(201, 168, 76, 0.1);
+        overflow-x: auto;
+    }
+
+    .explorer__drink-list {
+        flex-direction: row;
+        gap: 2px;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        padding-bottom: 8px;
+    }
+
+    .explorer__drink-item {
+        white-space: nowrap;
+        padding: 8px 12px;
+        font-size: 0.85rem;
+    }
+
+    .explorer__content {
+        padding: 32px 24px;
+        min-height: auto;
+    }
+
+    .explorer__3d-bg {
+        display: none;
+    }
+
+    /* Trio */
+    .trio-grid {
+        grid-template-columns: 1fr;
+        max-width: 340px;
+        margin: 0 auto;
+    }
+
+    /* Foundation */
+    .foundation-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Sourcing */
+    .sourcing-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Philosophy */
+    .philosophy-grid {
+        grid-template-columns: 1fr;
+        gap: 48px;
+    }
+
+    /* Story Honeycomb */
+    .story__honeycomb {
+        grid-template-columns: repeat(3, 70px);
+        grid-template-rows: repeat(4, 40px);
+    }
+
+    .story__hex {
+        width: 60px;
+        height: 69px;
+    }
+
+    /* Footer */
+    .footer__columns {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .footer__bottom {
+        flex-direction: column;
+        gap: 16px;
+        text-align: center;
+    }
+
+    /* Big Quote */
+    .big-quote__text {
+        font-size: 1.6rem;
+    }
+
+    /* Waitlist */
+    .waitlist-form {
+        flex-direction: column;
+    }
+}
+
+/* Small phones */
+@media (max-width: 400px) {
+    .hero__title {
+        font-size: 2rem;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+}

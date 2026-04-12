@@ -1,0 +1,163 @@
+/* ============================================
+   syn. — Theme System (Light & Dark Mode)
+   ============================================ */
+
+:root {
+    /* Drink colors — LOCKED, never change */
+    --drink-laal: #C2453D;
+    --drink-neela: #4A7FA8;
+    --drink-sona: #D4A832;
+    --drink-hara: #4A7A4E;
+    --drink-narangi: #D4723A;
+    --drink-gulaabi: #D4899A;
+    --drink-baingani: #6B5490;
+    --drink-mitti: #8A6E5A;
+    --drink-ujla: #C8C4BC;
+
+    /* Typography */
+    --font-display: 'DM Serif Display', serif;
+    --font-body: 'Cormorant Garamond', serif;
+    --font-mono: 'DM Mono', monospace;
+
+    /* Transitions */
+    --theme-transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ---- LIGHT MODE ---- */
+[data-theme="light"] {
+    --bg-page: #F5F0E6;
+    --bg-surface: #EBE4D4;
+    --bg-elevated: #E0D9C8;
+    --bg-dark: #1A1612;
+    --bg-dark-deeper: #0D0B08;
+
+    --text-primary: #1A1612;
+    --text-secondary: #5A5048;
+    --text-tertiary: #9A9080;
+    --text-on-dark: #F0E8D8;
+    --text-on-dark-secondary: #B8AA90;
+
+    --gold-accent: #C9A84C;
+    --gold-pale: #8A6820;
+    --gold-deep: #6A5010;
+    --gold-text-on-dark: #F5E9C0;
+
+    --border-default: rgba(26, 22, 18, 0.12);
+    --border-subtle: rgba(26, 22, 18, 0.06);
+    --border-emphasis: rgba(201, 168, 76, 0.40);
+    --divider-gold: rgba(201, 168, 76, 0.30);
+
+    /* Drink tint backgrounds (light mode) */
+    --tint-laal: #F8EDEC;
+    --tint-neela: #EAF0F6;
+    --tint-sona: #FBF4E2;
+    --tint-hara: #EAF2EB;
+    --tint-narangi: #FAF0E8;
+    --tint-gulaabi: #FAEDF0;
+    --tint-baingani: #F2EEF8;
+    --tint-mitti: #F2EDE8;
+    --tint-ujla: #F5F4F0;
+
+    /* Drink accents (light mode) */
+    --accent-laal: #C2453D;
+    --accent-neela: #4A7FA8;
+    --accent-sona: #D4A832;
+    --accent-hara: #4A7A4E;
+    --accent-narangi: #D4723A;
+    --accent-gulaabi: #D4899A;
+    --accent-baingani: #6B5490;
+    --accent-mitti: #8A6E5A;
+    --accent-ujla: #9A9080;
+
+    /* Shadows */
+    --shadow-sm: 0 2px 8px rgba(26, 22, 18, 0.06);
+    --shadow-md: 0 4px 20px rgba(26, 22, 18, 0.08);
+    --shadow-lg: 0 8px 40px rgba(26, 22, 18, 0.1);
+    --shadow-xl: 0 16px 60px rgba(26, 22, 18, 0.12);
+
+    /* Nav */
+    --nav-bg: rgba(245, 240, 230, 0.85);
+    --nav-bg-scrolled: rgba(245, 240, 230, 0.92);
+
+    /* Marquee */
+    --marquee-bg: #ebe4d4;
+}
+
+/* ---- DARK MODE ---- */
+[data-theme="dark"] {
+    --bg-page: #0D0B08;
+    --bg-surface: #1A1612;
+    --bg-elevated: #242018;
+    --bg-dark: #0D0B08;
+    --bg-dark-deeper: #060503;
+
+    --text-primary: #F0E8D8;
+    --text-secondary: #B8AA90;
+    --text-tertiary: #6A6058;
+    --text-on-dark: #F0E8D8;
+    --text-on-dark-secondary: #B8AA90;
+
+    --gold-accent: #C9A84C;
+    --gold-pale: #F5E9C0;
+    --gold-deep: #E8CC7A;
+    --gold-text-on-dark: #F5E9C0;
+
+    --border-default: rgba(201, 168, 76, 0.12);
+    --border-subtle: rgba(201, 168, 76, 0.06);
+    --border-emphasis: rgba(201, 168, 76, 0.40);
+    --divider-gold: rgba(201, 168, 76, 0.25);
+
+    /* Drink tint backgrounds (dark mode) */
+    --tint-laal: #2A0E0C;
+    --tint-neela: #0C1E2A;
+    --tint-sona: #261C04;
+    --tint-hara: #0C1E0E;
+    --tint-narangi: #261208;
+    --tint-gulaabi: #260E14;
+    --tint-baingani: #140E20;
+    --tint-mitti: #1C1208;
+    --tint-ujla: #1E1C18;
+
+    /* Drink accents (dark mode) */
+    --accent-laal: #E8726A;
+    --accent-neela: #7AAFCE;
+    --accent-sona: #E8C85A;
+    --accent-hara: #7AAD7E;
+    --accent-narangi: #E8A07A;
+    --accent-gulaabi: #E8B8C4;
+    --accent-baingani: #A08CC0;
+    --accent-mitti: #B89A88;
+    --accent-ujla: #E8E4DC;
+
+    /* Shadows */
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.2);
+    --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.3);
+    --shadow-lg: 0 8px 40px rgba(0, 0, 0, 0.35);
+    --shadow-xl: 0 16px 60px rgba(0, 0, 0, 0.4);
+
+    /* Nav */
+    --nav-bg: rgba(13, 11, 8, 0.85);
+    --nav-bg-scrolled: rgba(13, 11, 8, 0.92);
+
+    /* Marquee */
+    --marquee-bg: #141210;
+}
+
+/* Theme transition on all themed elements */
+body,
+.nav,
+.hero,
+.marquee-section,
+.navratna,
+.explorer,
+.story,
+.celebratory,
+.foundation,
+.big-quote,
+.sourcing,
+.philosophy,
+.waitlist-section,
+.footer {
+    transition: background-color var(--theme-transition),
+                color var(--theme-transition);
+}

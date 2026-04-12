@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>syn. — Nine Indian Superfoods. Nine Millennia of Wisdom.</title>
+    <meta name="description" content="syn. Navratna Collection — Nine sparkling superfood drinks rooted in nine millennia of Ayurvedic, Siddha, and Unani wisdom. Zero guilt. Zero plastic. Everything India always knew.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Mono:wght@300;400;500&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+    
+    <!-- Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/sections.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
+    <!-- Theme Toggle -->
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode">
+        <svg class="theme-toggle__sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+        <svg class="theme-toggle__moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+    </button>
+
+    <!-- Sticky Navigation -->
+    <nav class="nav" id="mainNav">
+        <div class="nav__brand">
+            <a href="#hero" class="nav__logo">syn.</a>
+        </div>
+        <div class="nav__links" id="navLinks">
+            <a href="#navratna" class="nav__link">The Nine</a>
+            <a href="#explorer" class="nav__link">Ingredients</a>
+            <a href="#story" class="nav__link">Our Story</a>
+            <a href="#celebratory" class="nav__link">Celebratory Trio</a>
+            <a href="#sourcing" class="nav__link">Sourcing</a>
+            <a href="#philosophy" class="nav__link">Philosophy</a>
+        </div>
+        <button class="nav__hamburger" id="hamburgerBtn" aria-label="Open menu">
+            <svg width="24" height="24" viewBox="0 0 24 24">
+                <polygon points="12,2 22,7 22,17 12,22 2,17 2,7" fill="none" stroke="currentColor" stroke-width="1.5"/>
+            </svg>
+        </button>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu" id="mobileMenu">
+        <button class="mobile-menu__close" id="mobileMenuClose" aria-label="Close menu">✕</button>
+        <div class="mobile-menu__links">
+            <a href="#navratna" class="mobile-menu__link" style="color: var(--gold-accent)">The Navratna Collection</a>
+            <a href="#explorer" class="mobile-menu__link" style="color: #C2453D">Laal</a>
+            <a href="#explorer" class="mobile-menu__link" style="color: #4A7FA8">Neela</a>
+            <a href="#explorer" class="mobile-menu__link" style="color: #D4A832">Sona ✦</a>
+            <a href="#explorer" class="mobile-menu__link" style="color: #4A7A4E">Hara</a>
+            <a href="#explorer" class="mobile-menu__link" style="color: #D4723A">Narangi</a>
+            <a href="#explorer" class="mobile-menu__link" style="color: #D4899A">Gulaabi ✦</a>
+            <a href="#explorer" class="mobile-menu__link" style="color: #6B5490">Baingani</a>
+            <a href="#explorer" class="mobile-menu__link" style="color: #8A6E5A">Mitti</a>
+            <a href="#explorer" class="mobile-menu__link" style="color: #C8C4BC">Ujla ✦</a>
+            <a href="#story" class="mobile-menu__link" style="color: var(--gold-accent)">Our Story</a>
+            <a href="#philosophy" class="mobile-menu__link" style="color: var(--gold-accent)">Philosophy</a>
+        </div>
+    </div>
+
+    <!-- SECTION 1: HERO -->
+    <section class="hero" id="hero">
+        <div class="hero__content">
+            <span class="eyebrow">Navratna Collection — Nine Gems. Nine Millennia. One India.</span>
+            <h1 class="hero__title">Clean energy,<br>Indian soul.</h1>
+            <p class="hero__subtitle">Nine sparkling superfood drinks rooted in nine millennia of Ayurvedic, Siddha, and Unani wisdom. Zero guilt. Zero plastic. Everything India always knew.</p>
+            <div class="hero__buttons">
+                <a href="#navratna" class="btn btn--primary">Meet the Nine</a>
+                <a href="#explorer" class="btn btn--ghost">The Ingredients</a>
+            </div>
+            <div class="hero__waitlist">
+                <p class="hero__waitlist-label">syn. is coming. Be the first to know.</p>
+                <form class="waitlist-form" id="heroWaitlistForm">
+                    <input type="email" class="waitlist-form__input" placeholder="your@email.com" required>
+                    <button type="submit" class="btn btn--primary btn--small">Join Waitlist</button>
+                </form>
+            </div>
+            <div class="hero__dots">
+                <span class="hero__dot" style="background:#C2453D" title="Laal"></span>
+                <span class="hero__dot" style="background:#4A7FA8" title="Neela"></span>
+                <span class="hero__dot" style="background:#D4A832" title="Sona"></span>
+                <span class="hero__dot" style="background:#4A7A4E" title="Hara"></span>
+                <span class="hero__dot" style="background:#D4723A" title="Narangi"></span>
+                <span class="hero__dot" style="background:#D4899A" title="Gulaabi"></span>
+                <span class="hero__dot" style="background:#6B5490" title="Baingani"></span>
+                <span class="hero__dot" style="background:#8A6E5A" title="Mitti"></span>
+                <span class="hero__dot" style="background:#C8C4BC" title="Ujla"></span>
+            </div>
+        </div>
+        <div class="hero__prism" id="heroPrism"></div>
+        <div class="hero__scroll">
+            <span class="hero__scroll-text">SCROLL</span>
+            <div class="hero__scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: MARQUEE -->
+    <section class="marquee-section" id="marquee">
+        <div class="marquee-track">
+            <div class="marquee-content">
+                <span>✦ Nine millennia of Indian wisdom</span>
+                <span class="marquee-dot">·</span>
+                <span>✦ Nine Indian superfoods</span>
+                <span class="marquee-dot">·</span>
+                <span>✦ Arthashastra documented · 300 BCE</span>
+                <span class="marquee-dot">·</span>
+                <span>✦ 100% aluminium · zero plastic</span>
+                <span class="marquee-dot">·</span>
+                <span>✦ Navratna — nine gems</span>
+                <span class="marquee-dot">·</span>
+                <span>✦ Light sparkling · 2.0–2.5 vol CO₂</span>
+                <span class="marquee-dot">·</span>
+                <span>✦ Raw sugarcane · root fiber</span>
+                <span class="marquee-dot">·</span>
+                <span>✦ Charaka Samhita · Siddha texts</span>
+                <span class="marquee-dot">·</span>
+                <span>✦ Ladakh to Kannauj to Sindhudurg</span>
+                <span class="marquee-dot">·</span>
+                <span>✦ syn. — everything here was already here</span>
+                <span class="marquee-dot">·</span>
+            </div>
+            <div class="marquee-content" aria-hidden="true">
+                <span>✦ Nine millennia of Indian wisdom</span>
+                <span class="marquee-dot">·</span>
+                <span>✦ Nine Indian superfoods</span>
+                <span class="marquee-dot">·</span>
+                <span>✦ Arthashastra documented · 300 BCE</span>
+                <span class="marquee-dot">·</span>
+                <span>✦ 100% aluminium · zero plastic</span>
+                <span class="marquee-dot">·</span>
+                <span>✦ Navratna — nine gems</span>
+                <span class="marquee-dot">·</span>
+                <span>✦ Light sparkling · 2.0–2.5 vol CO₂</span>
+                <span class="marquee-dot">·</span>
+                <span>✦ Raw sugarcane · root fiber</span>
+                <span class="marquee-dot">·</span>
+                <span>✦ Charaka Samhita · Siddha texts</span>
+                <span class="marquee-dot">·</span>
+                <span>✦ Ladakh to Kannauj to Sindhudurg</span>
+                <span class="marquee-dot">·</span>
+                <span>✦ syn. — everything here was already here</span>
+                <span class="marquee-dot">·</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: NAVRATNA COLLECTION -->
+    <section class="navratna" id="navratna">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="eyebrow">The Navratna Collection</span>
+                <h2 class="section-title">Nine gems. Nine millennia.</h2>
+                <p class="section-body">In Mughal emperor Akbar's court, the Navratna were his nine extraordinary minds — the nine jewels of the empire. In Hindu astrology, nine gems carry nine planetary forces. In syn., nine drinks carry nine superfoods, nine stories, and nine colors sourced entirely from the ingredients themselves. No dye. No artifice. Just India.</p>
+            </div>
+            <div class="hex-grid" id="hexGrid">
+                <!-- Cards populated by JS -->
+            </div>
+            <p class="navratna__note reveal">✦ marks the Celebratory Trio — Sona · Gulaabi · Ujla</p>
+        </div>
+    </section>
+
+    <!-- SECTION 4: INGREDIENT EXPLORER -->
+    <section class="explorer" id="explorer">
+        <div class="explorer__sidebar" id="explorerSidebar">
+            <h3 class="explorer__sidebar-title">The Nine</h3>
+            <ul class="explorer__drink-list" id="drinkList">
+                <!-- Populated by JS -->
+            </ul>
+        </div>
+        <div class="explorer__content" id="explorerContent">
+            <div class="explorer__3d-bg" id="explorer3d"></div>
+            <div class="explorer__detail" id="explorerDetail">
+                <!-- Populated by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 5: OUR STORY -->
+    <section class="story" id="story">
+        <div class="container story__layout">
+            <div class="story__text reveal">
+                <span class="eyebrow">Why syn.</span>
+                <blockquote class="story__quote">"Everything here was already here."</blockquote>
+                <p class="body-text">Synthesis. Synergy. Syncretism. The name syn. is the acknowledgment that this brand did not invent a single ingredient, a single tradition, or a single piece of knowledge. Every superfood in the Navratna collection was documented in an ancient text before modern science had the tools to explain why it worked. Every cultural story was lived before it was marketed.</p>
+                <p class="body-text">What syn. does is translation. From the Charaka Samhita to a hexagonal aluminium can. From the nannari vendor in Mylapore's lanes to a global shelf. From nine millennia of Indian wisdom to the person who just wants something better than Diet Coke.</p>
+                <p class="body-text">The Navratna — nine gems of Mughal court and Hindu astrology — are the nine drinks. Each is a gem. Each carries a planetary power. Each has been waiting, in plain sight, inside Indian tradition, for someone to put it in a can.</p>
+                <div class="gold-rule"></div>
+                <a href="#navratna" class="btn btn--primary">Meet the Nine</a>
+            </div>
+            <div class="story__visual" id="storyVisual">
+                <div class="story__mandala" id="storyMandala"></div>
+                <div class="story__honeycomb" id="storyHoneycomb">
+                    <!-- Populated by JS -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 6: CELEBRATORY TRIO -->
+    <section class="celebratory" id="celebratory">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="eyebrow">✦ The Celebratory Trio</span>
+                <h2 class="section-title">Gold. Rosé. Pearl.</h2>
+                <p class="section-body">Three drinks that look like a celebration and drink like an everyday ritual. Available individually and as a gift trio. Every celebration. Every Tuesday.</p>
+            </div>
+            <div class="trio-grid">
+                <div class="trio-card trio-card--sona reveal" data-drink="sona">
+                    <div class="trio-card__shimmer"></div>
+                    <div class="trio-card__hex" style="background: linear-gradient(135deg, #D4A832, #e8cc7a)"></div>
+                    <span class="trio-card__number">No. 03 · Gold Champagne</span>
+                    <h3 class="trio-card__name" style="color: #D4A832">Sona</h3>
+                    <p class="trio-card__tagline">The gold of Lakshmi's sari, in a can</p>
+                    <p class="trio-card__desc">Bone dry. Lemongrass-forward. Pale gold from a micro-dose of Haldi. Dry lime zest finish. The same feeling as a cold Champagne flute — without the alcohol, without the sugar, without the morning after.</p>
+                </div>
+                <div class="trio-card trio-card--gulaabi reveal" data-drink="gulaabi">
+                    <div class="trio-card__shimmer"></div>
+                    <div class="trio-card__hex" style="background: linear-gradient(135deg, #D4899A, #e8aaba)"></div>
+                    <span class="trio-card__number">No. 06 · Rosé Champagne</span>
+                    <h3 class="trio-card__name" style="color: #D4899A">Gulaabi</h3>
+                    <p class="trio-card__tagline">Gulal and the ghats at dawn</p>
+                    <p class="trio-card__desc">Rose gold blush. Kannauj rose water — 400 years of Mughal attar — and Bihar lychee in its two-week season. Hibiscus vinegar for the wine-like depth. The color of gulal in the air above Varanasi.</p>
+                </div>
+                <div class="trio-card trio-card--ujla reveal" data-drink="ujla">
+                    <div class="trio-card__shimmer"></div>
+                    <div class="trio-card__hex" style="background: linear-gradient(135deg, #C8C4BC, #e8e4dc)"></div>
+                    <span class="trio-card__number">No. 09 · Pearlescent White</span>
+                    <h3 class="trio-card__name" style="color: #C8C4BC">Ujla</h3>
+                    <p class="trio-card__tagline">Nine millennia of Tamil Nadu</p>
+                    <p class="trio-card__desc">Nannari — the root without end — in its most beautiful form. Pearlescent, vanilla-earthy, cooling. The street stall drink of old Chennai, bottled for the first time in its history.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 7: THE FOUNDATION -->
+    <section class="foundation" id="foundation">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="eyebrow">Present in every can</span>
+                <h2 class="section-title">The three that hold it all together.</h2>
+                <p class="section-body">Before any superfood is added, every can shares three foundation ingredients. Not fillers. Each one has a documented history going back millennia and a biological function no synthetic ingredient can replicate.</p>
+            </div>
+            <div class="foundation-grid">
+                <div class="foundation-card reveal">
+                    <h3 class="foundation-card__title">Raw Sugarcane Juice</h3>
+                    <p class="foundation-card__text">The word 'sugar' derives from Sanskrit sharkara — granules. India did not merely grow sugarcane; it gave the concept of sweetness to the world. The Arthashastra, written by Chanakya in the 4th century BCE, documents Ikshu — sugarcane juice — as a classified beverage of the Mauryan court. Cold-pressed, unrefined, it retains trace minerals that refining strips: iron, calcium, magnesium, potassium. The sweetness of the roadside ganna press — everyone in India knows this taste.</p>
+                    <blockquote class="foundation-card__quote">"Ikshu rasa nourishes the dhatus, clears the channels, and sustains the body without disturbing the doshas."<cite>— Charaka Samhita, Sutrasthana</cite></blockquote>
+                </div>
+                <div class="foundation-card reveal">
+                    <h3 class="foundation-card__title">Chicory Root Inulin</h3>
+                    <p class="foundation-card__text">Ibn Sina's Canon of Medicine (1025 CE, the foundational text of Unani medicine practiced across Mughal India) called Kasni — chicory — the greatest of all liver medicines. At 1.5g of inulin per can, the fiber physically intercepts the sugarcane's natural sugars and slows their absorption dramatically. No spike. No crash. No debt to tomorrow. We call it root fiber on the label. Not probiotic. Two words. No jargon. The function is real enough to not need marketing language.</p>
+                    <blockquote class="foundation-card__quote">"Kasni is the greatest of all liver medicines — it cools the fire of pitta, opens the channels, restores the clarity disease has clouded."<cite>— Ibn Sina, Canon of Medicine, 1025 CE</cite></blockquote>
+                </div>
+                <div class="foundation-card reveal">
+                    <h3 class="foundation-card__title">Light Sparkling Water</h3>
+                    <p class="foundation-card__text">The Rigveda opens with hymns to fire and water. Jal — water — is the first offering in every Hindu puja. At 2.0–2.5 volumes of CO₂, compared to cola's 3.7, the carbonation in syn. is fine and gentle. It lifts aromatic compounds to the nose and creates effervescence without creating a wall of fizz that blocks flavor. You taste the roselle, the nannari, the lemongrass before the liquid even settles. You can drink the full 250ml without the bloat that aggressive carbonation causes. The carbonation in syn. serves the ingredient. In cola, it disguises the sugar. These are different philosophies, expressed in the same gas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 8: BIG QUOTE -->
+    <section class="big-quote" id="bigQuote">
+        <div class="container">
+            <h2 class="big-quote__text reveal">"Everything here was <span class="gold-gradient">already</span> here."</h2>
+        </div>
+    </section>
+
+    <!-- SECTION 9: SOURCING -->
+    <section class="sourcing" id="sourcing">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="eyebrow">From Farm to Can</span>
+                <h2 class="section-title">Traced. Named. Accountable.</h2>
+                <p class="section-body">Every ingredient in the Navratna collection is sourced from a specific Indian region with a documented agricultural and cultural history.</p>
+            </div>
+            <div class="sourcing-grid" id="sourcingGrid">
+                <!-- Populated by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 10: PHILOSOPHY -->
+    <section class="philosophy" id="philosophy">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="eyebrow">The Philosophy</span>
+                <h2 class="section-title philosophy__title">How we think about everything.</h2>
+                <p class="section-body">Three convictions. Not marketing positions — the actual reasons every decision in this brand gets made the way it does.</p>
+            </div>
+            <div class="philosophy-grid">
+                <div class="philosophy-card reveal">
+                    <span class="philosophy-card__number">01</span>
+                    <h3 class="philosophy-card__title">Color from ingredient, never from dye.</h3>
+                    <p class="philosophy-card__text">Every color in the Navratna collection comes entirely from its hero ingredient. Laal is red because roselle is red. Neela is blue because butterfly pea flower is blue. Ujla is pearlescent because nannari, filtered to crystal clarity in coconut water, reads pearl when held to light. No FD&C dyes. No 'natural flavors.' The color is the proof of the ingredient. If the ingredient changes, the color changes. That is a constraint we embrace because it is honest.</p>
+                </div>
+                <div class="philosophy-card reveal">
+                    <span class="philosophy-card__number">02</span>
+                    <h3 class="philosophy-card__title">Ancient observation. Modern confirmation.</h3>
+                    <p class="philosophy-card__text">Every ingredient in The Nine was documented in the Charaka Samhita, Sushruta Samhita, Ashtanga Hridayam, or Tamil Siddha texts before modern science had the tools to explain the mechanism. Modern pharmacology has now confirmed the mechanism. We find this remarkable: that 3,000–9,000 years of clinical observation, without mass spectrometry or randomized controlled trials, arrived at essentially correct conclusions. syn. trusts that track record.</p>
+                </div>
+                <div class="philosophy-card reveal">
+                    <span class="philosophy-card__number">03</span>
+                    <h3 class="philosophy-card__title">Zero plastic. 100% aluminium. No compromise.</h3>
+                    <p class="philosophy-card__text">The hexagonal aluminium cans are BPA-free lined, water-based ink printed, and infinitely recyclable. The kabadiwalla network — India's informal recycling economy — means that every empty syn. can has economic value the moment it leaves your hand. India already had a circular economy for aluminium. We just designed a can worthy of it.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WAITLIST SECTION -->
+    <section class="waitlist-section" id="waitlistSection">
+        <div class="container">
+            <div class="waitlist-block reveal">
+                <h2 class="waitlist-block__title">syn. is coming.</h2>
+                <p class="waitlist-block__subtitle">Be the first to know.</p>
+                <form class="waitlist-form waitlist-form--large" id="footerWaitlistForm">
+                    <input type="email" class="waitlist-form__input" placeholder="your@email.com" required>
+                    <button type="submit" class="btn btn--primary">Join the Waitlist</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer__top">
+                <div class="footer__brand">
+                    <span class="footer__logo">syn.</span>
+                    <p class="footer__tagline">Nine Indian superfoods. Nine millennia of wisdom. Everything here was already here.</p>
+                </div>
+                <div class="footer__columns">
+                    <div class="footer__col">
+                        <h4 class="footer__col-title">The Collection</h4>
+                        <ul class="footer__links">
+                            <li><a href="#explorer" style="color:#C2453D">Laal</a></li>
+                            <li><a href="#explorer" style="color:#4A7FA8">Neela</a></li>
+                            <li><a href="#explorer" style="color:#D4A832">Sona ✦</a></li>
+                            <li><a href="#explorer" style="color:#4A7A4E">Hara</a></li>
+                            <li><a href="#explorer" style="color:#D4723A">Narangi</a></li>
+                            <li><a href="#explorer" style="color:#D4899A">Gulaabi ✦</a></li>
+                            <li><a href="#explorer" style="color:#6B5490">Baingani</a></li>
+                            <li><a href="#explorer" style="color:#8A6E5A">Mitti</a></li>
+                            <li><a href="#explorer" style="color:#C8C4BC">Ujla ✦</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__col">
+                        <h4 class="footer__col-title">Learn</h4>
+                        <ul class="footer__links">
+                            <li><a href="#explorer">Ingredient Explorer</a></li>
+                            <li><a href="#story">Our Story</a></li>
+                            <li><a href="#sourcing">From Farm to Can</a></li>
+                            <li><a href="#philosophy">Philosophy</a></li>
+                            <li><a href="#foundation">The Foundation</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__col">
+                        <h4 class="footer__col-title">The Celebratory Trio</h4>
+                        <ul class="footer__links">
+                            <li><a href="#celebratory" style="color:#D4A832">Sona · Gold Champagne</a></li>
+                            <li><a href="#celebratory" style="color:#D4899A">Gulaabi · Rosé Champagne</a></li>
+                            <li><a href="#celebratory" style="color:#C8C4BC">Ujla · Pearl</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p class="footer__copyright">© 2025 syn. · Navratna Collection · Nine millennia · Zero plastic · All ingredients traceable</p>
+                <div class="footer__hex-marks">
+                    <span class="footer__hex" style="background:#C2453D"></span>
+                    <span class="footer__hex" style="background:#4A7FA8"></span>
+                    <span class="footer__hex" style="background:#D4A832"></span>
+                    <span class="footer__hex" style="background:#4A7A4E"></span>
+                    <span class="footer__hex" style="background:#D4723A"></span>
+                    <span class="footer__hex" style="background:#D4899A"></span>
+                    <span class="footer__hex" style="background:#6B5490"></span>
+                    <span class="footer__hex" style="background:#8A6E5A"></span>
+                    <span class="footer__hex" style="background:#C8C4BC"></span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/data.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/cursor.js"></script>
+    <script src="js/three-scenes.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
