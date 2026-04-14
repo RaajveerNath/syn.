@@ -248,40 +248,38 @@ function initWaitlistForms() {
             const phone = telInput.value;
 
             if (email) {
-                // Submit to MailerLite
-                if (window.ml) {
-                    ml('account', '2267535');
-                    // We use the MailerLite form-specific submission
-                    // Note: We're mapping 'phone' to a custom field if it exists in your ML account
-                    const params = new URLSearchParams();
-                    params.append('fields[email]', email);
-                    if (phone) params.append('fields[phone]', phone);
-                    
-                    fetch(`https://assets.mailerlite.com/jsonp/2267535/forms/184728067234596844/subscribe`, {
-                        method: 'POST',
-                        body: params
-                    })
-                    .then(res => res.json())
-                    .then(data => {
-                        console.log('MailerLite Sync Success:', data);
-                        // Show modal on success
-                        document.getElementById('successModal').classList.add('active');
-                    })
-                    .catch(err => console.error('MailerLite Sync Error:', err));
-                }
-
-                // Show button success state
+                // Show button success state immediately
                 const btn = form.querySelector('.btn');
                 const origText = btn.textContent;
                 btn.textContent = 'Waitlisted ✦';
                 btn.style.background = '#4A7A4E';
+                
+                // SHOW MODAL IMMEDIATELY for best UX
+                document.getElementById('successModal').classList.add('active');
+
+                // Submit to MailerLite in background
+                if (window.ml) {
+                    const params = new URLSearchParams();
+                    params.append('fields[email]', email);
+                    if (phone) params.append('fields[phone]', phone);
+                    
+                    // We use the JSONP-style subscribe endpoint which is most compatible
+                    fetch(`https://assets.mailerlite.com/jsonp/2267535/forms/184728067234596844/subscribe`, {
+                        method: 'POST',
+                        body: params,
+                        mode: 'no-cors' // Use no-cors to bypass browser blocks
+                    })
+                    .catch(err => console.error('Background Sync Note:', err));
+                }
+
+                // Clear inputs
                 emailInput.value = '';
                 telInput.value = '';
 
                 setTimeout(() => {
                     btn.textContent = origText;
                     btn.style.background = '';
-                }, 5000); // Updated to 5 seconds
+                }, 5000);
             }
         });
     });
