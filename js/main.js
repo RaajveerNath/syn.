@@ -253,21 +253,21 @@ function initWaitlistForms() {
                     ml('account', '2267535');
                     // We use the MailerLite form-specific submission
                     // Note: We're mapping 'phone' to a custom field if it exists in your ML account
-                    const formData = new FormData();
-                    formData.append('fields[email]', email);
-                    if (phone) formData.append('fields[phone]', phone);
+                    const params = new URLSearchParams();
+                    params.append('fields[email]', email);
+                    if (phone) params.append('fields[phone]', phone);
                     
                     fetch(`https://assets.mailerlite.com/jsonp/2267535/forms/184728067234596844/subscribe`, {
                         method: 'POST',
-                        body: formData
+                        body: params
                     })
                     .then(res => res.json())
                     .then(data => {
-                        console.log('MailerLite Response:', data);
+                        console.log('MailerLite Sync Success:', data);
                         // Show modal on success
                         document.getElementById('successModal').classList.add('active');
                     })
-                    .catch(err => console.error('MailerLite Error:', err));
+                    .catch(err => console.error('MailerLite Sync Error:', err));
                 }
 
                 // Show button success state
@@ -281,7 +281,7 @@ function initWaitlistForms() {
                 setTimeout(() => {
                     btn.textContent = origText;
                     btn.style.background = '';
-                }, 4000);
+                }, 5000); // Updated to 5 seconds
             }
         });
     });
