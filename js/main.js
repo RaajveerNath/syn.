@@ -248,10 +248,29 @@ function initWaitlistForms() {
             const phone = telInput.value;
 
             if (email) {
-                // Log for now (connect to MailerLite later)
-                console.log('New Sign-up:', { email, phone });
+                // Submit to MailerLite
+                if (window.ml) {
+                    ml('account', '2267535');
+                    // We use the MailerLite form-specific submission
+                    // Note: We're mapping 'phone' to a custom field if it exists in your ML account
+                    const formData = new FormData();
+                    formData.append('fields[email]', email);
+                    if (phone) formData.append('fields[phone]', phone);
+                    
+                    fetch(`https://assets.mailerlite.com/jsonp/2267535/forms/184728067234596844/subscribe`, {
+                        method: 'POST',
+                        body: formData
+                    })
+                    .then(res => res.json())
+                    .then(data => {
+                        console.log('MailerLite Response:', data);
+                        // Show modal on success
+                        document.getElementById('successModal').classList.add('active');
+                    })
+                    .catch(err => console.error('MailerLite Error:', err));
+                }
 
-                // Show success
+                // Show button success state
                 const btn = form.querySelector('.btn');
                 const origText = btn.textContent;
                 btn.textContent = 'Waitlisted ✦';
@@ -262,8 +281,25 @@ function initWaitlistForms() {
                 setTimeout(() => {
                     btn.textContent = origText;
                     btn.style.background = '';
-                }, 3000);
+                }, 4000);
             }
         });
     });
+
+    // Modal Close Logic
+    const successModal = document.getElementById('successModal');
+    const closeModal = document.getElementById('closeModal');
+    const modalOverlay = successModal.querySelector('.modal__overlay');
+
+    if (closeModal) {
+        closeModal.addEventListener('click', () => {
+            successModal.classList.remove('active');
+        });
+    }
+
+    if (modalOverlay) {
+        modalOverlay.addEventListener('click', () => {
+            successModal.classList.remove('active');
+        });
+    }
 }
