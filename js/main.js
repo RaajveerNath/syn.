@@ -136,9 +136,7 @@ function selectDrink(index) {
     });
 
     // Update 3D can
-    if (window.innerWidth > 768) {
-        SynThree.initExplorerCan('explorer3d', drink.color);
-    }
+    SynThree.initExplorerCan('explorer3d', drink.color);
 }
 
 /* ---- Build Sourcing Grid ---- */
