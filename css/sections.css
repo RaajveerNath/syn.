@@ -200,9 +200,9 @@
 }
 
 .hero .waitlist-form__input {
-    background: rgba(201, 168, 76, 0.06);
-    border-color: rgba(201, 168, 76, 0.3);
-    color: var(--text-on-dark);
+    background: rgba(201, 168, 76, 0.04);
+    border-color: rgba(201, 168, 76, 0.2);
+    color: var(--text-primary);
 }
 
 .hero__dots {

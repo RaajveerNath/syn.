@@ -242,16 +242,22 @@ function initWaitlistForms() {
     forms.forEach(form => {
         form.addEventListener('submit', (e) => {
             e.preventDefault();
-            const input = form.querySelector('.waitlist-form__input');
-            const email = input.value;
+            const emailInput = form.querySelector('input[type="email"]');
+            const telInput = form.querySelector('input[type="tel"]');
+            const email = emailInput.value;
+            const phone = telInput.value;
 
             if (email) {
+                // Log for now (connect to MailerLite later)
+                console.log('New Sign-up:', { email, phone });
+
                 // Show success
                 const btn = form.querySelector('.btn');
                 const origText = btn.textContent;
-                btn.textContent = 'Added ✦';
+                btn.textContent = 'Waitlisted ✦';
                 btn.style.background = '#4A7A4E';
-                input.value = '';
+                emailInput.value = '';
+                telInput.value = '';
 
                 setTimeout(() => {
                     btn.textContent = origText;

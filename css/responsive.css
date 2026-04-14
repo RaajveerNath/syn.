@@ -213,6 +213,12 @@
         overflow-x: auto;
     }
 
+    .hero .waitlist-form__input {
+        background: rgba(201, 168, 76, 0.04);
+        border-color: rgba(201, 168, 76, 0.2);
+        color: var(--text-primary);
+    }
+
     .explorer__drink-list {
         flex-direction: row;
         gap: 2px;
@@ -299,7 +305,12 @@
 
     /* Waitlist */
     .waitlist-form {
-        flex-direction: column;
+        max-width: 100% !important;
+        align-items: center !important;
+    }
+
+    .waitlist-form__input {
+        text-align: center !important;
     }
 }
 
