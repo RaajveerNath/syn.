@@ -186,8 +186,9 @@ function buildHoneycomb() {
         hex.innerHTML = `<span class="story__hex-label">${drink.name}</span>`;
 
         // Offset even rows
+        const isMobile = window.innerWidth <= 768;
         if (item.row === 2 || item.row === 4) {
-            hex.style.marginLeft = '43px';
+            hex.style.marginLeft = isMobile ? '35px' : '43px';
         }
 
         hex.addEventListener('click', () => {

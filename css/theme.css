@@ -80,7 +80,14 @@
     --nav-bg-scrolled: rgba(245, 240, 230, 0.92);
 
     /* Marquee */
-    --marquee-bg: #ebe4d4;
+    --marquee-bg: #EBE4D4;
+
+    /* Hero Background — Specific for Light mode */
+    --hero-bg: #1A1612; /* Keep it dark for premium feel? Or make it light? User says it's not working well on 'first page' */
+    /* Let's try making it change significantly to solve the 'not working' report */
+    --bg-hero: #F5F0E6; 
+    --text-hero-primary: #1A1612;
+    --text-hero-secondary: #5A5048;
 }
 
 /* ---- DARK MODE ---- */
@@ -141,23 +148,35 @@
 
     /* Marquee */
     --marquee-bg: #141210;
+
+    /* Hero Background — Specific for Dark mode */
+    --bg-hero: #0D0B08;
+    --text-hero-primary: #F0E8D8;
+    --text-hero-secondary: #B8AA90;
 }
 
 /* Theme transition on all themed elements */
-body,
-.nav,
-.hero,
-.marquee-section,
-.navratna,
-.explorer,
-.story,
-.celebratory,
-.foundation,
-.big-quote,
-.sourcing,
-.philosophy,
-.waitlist-section,
-.footer {
+body, 
+section, 
+nav, 
+footer, 
+div, 
+h1, h2, h3, h4, h5, h6, 
+p, span, a, 
+button, 
+input, 
+textarea {
     transition: background-color var(--theme-transition),
-                color var(--theme-transition);
+                color var(--theme-transition),
+                border-color var(--theme-transition),
+                box-shadow var(--theme-transition),
+                opacity var(--theme-transition),
+                backdrop-filter var(--theme-transition);
 }
+
+/* Specific exclusions or adjustments if needed */
+.hero, .nav, .mobile-menu {
+    transition: background var(--theme-transition),
+                backdrop-filter var(--theme-transition);
+}
+
