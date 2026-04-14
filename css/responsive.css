@@ -123,15 +123,14 @@
     }
 
     .hero__prism {
-        position: relative;
-        right: auto;
-        top: auto;
-        transform: none;
-        width: 100%;
-        height: 200px;
-        margin-top: 20px;
-        opacity: 0.6;
-        pointer-events: none; /* Ensure no interaction blocking */
+        position: absolute !important; /* Move it behind the text again but with low opacity */
+        left: 0 !important;
+        top: 40% !important;
+        width: 100% !important;
+        height: 400px !important;
+        opacity: 0.15 !important;
+        pointer-events: none !important;
+        z-index: 1 !important;
     }
 
     .hero__scroll {
@@ -139,10 +138,13 @@
     }
 
     .hero__title {
-        font-size: 2.5rem !important;
-        color: #1A1612 !important; /* Force dark color in light mode */
-        margin-top: 20px !important;
+        font-size: 2.6rem !important;
+        color: #000000 !important; /* Force true black for maximum visibility */
+        margin-top: 10px !important;
         line-height: 1.1 !important;
+        font-weight: 500 !important;
+        position: relative !important;
+        z-index: 11 !important;
     }
 
     [data-theme="dark"] .hero__title {
@@ -150,9 +152,13 @@
     }
 
     .hero__subtitle {
-        color: #5A5048 !important;
+        color: #2D2620 !important; /* Darker charcoal */
         opacity: 1 !important;
-        font-size: 1rem !important;
+        font-size: 1.05rem !important;
+        line-height: 1.6 !important;
+        font-weight: 400 !important;
+        position: relative !important;
+        z-index: 11 !important;
     }
 
     [data-theme="dark"] .hero__subtitle {
@@ -160,8 +166,9 @@
     }
 
     .eyebrow {
-        color: var(--gold-accent) !important;
+        color: #8A6820 !important; /* Darker gold for visibility */
         opacity: 1 !important;
+        font-weight: 500 !important;
     }
 
     .hero__buttons {
