@@ -6,12 +6,12 @@ const DRINKS = [
     {
         id: 'laal',
         number: '01',
-        name: 'Laal',
+        name: 'Elle',
         color: '#C2453D',
         textOnHero: '#FFFFFF',
         gems: 'Red · Ruby · Manik',
         tagline: 'Sindoor. Kumkum. The vermillion of Holi.',
-        description: 'Sindoor. Kumkum. The vermillion of Holi. Roselle — Gongura, the sour queen of Andhra — gives Laal its deep cranberry and its iron-rich character.',
+        description: 'Sindoor. Kumkum. The vermillion of Holi. Roselle — Gongura, the sour queen of Andhra — gives Elle its deep cranberry and its iron-rich character.',
         ingredientList: 'Roselle · Amla · Ginger · Himalayan Salt',
         celebratory: false,
         ingredients: [
@@ -38,7 +38,7 @@ const DRINKS = [
     {
         id: 'neela',
         number: '02',
-        name: 'Neela',
+        name: 'Ternate',
         color: '#4A7FA8',
         textOnHero: '#FFFFFF',
         gems: 'Blue · Sapphire · Neelam',
@@ -70,12 +70,12 @@ const DRINKS = [
     {
         id: 'sona',
         number: '03',
-        name: 'Sona',
+        name: 'Gold',
         color: '#D4A832',
         textOnHero: '#1A1612',
         gems: 'Gold · Topaz · Pukhraj · Celebratory Trio',
-        tagline: 'Sona means gold. The color of Lakshmi\'s sari.',
-        description: 'Sona means gold. The color of Lakshmi\'s sari, the haldi at every wedding. Lemongrass, bone dry and citrus-floral, is the champagne you drink every day and every occasion.',
+        tagline: 'The color of Lakshmi\'s sari.',
+        description: 'The color of Lakshmi\'s sari, the haldi at every wedding. Lemongrass, bone dry and citrus-floral, is the champagne you drink every day and every occasion.',
         ingredientList: 'Lemongrass · Turmeric (micro) · Bromelain · Lime Zest',
         celebratory: true,
         ingredients: [
@@ -87,13 +87,13 @@ const DRINKS = [
             },
             {
                 name: 'Turmeric (micro)',
-                story: 'Haridra — the golden one. The haldi ceremony before every Hindu wedding. Atharvaveda (1500 BCE). Erode, Tamil Nadu — the Yellow City, world\'s largest turmeric trading center. In Sona at micro-dose: color only, not flavor.',
+                story: 'Haridra — the golden one. The haldi ceremony before every Hindu wedding. Atharvaveda (1500 BCE). Erode, Tamil Nadu — the Yellow City, world\'s largest turmeric trading center. In Gold at micro-dose: color only, not flavor.',
                 flavor: 'Color only — pale gold (#D4A832)',
                 science: '3,000+ curcumin studies. Inhibits NF-kB, master inflammatory regulator.'
             },
             {
                 name: 'Bromelain',
-                story: 'Used in folk medicine across South and Southeast Asia for centuries as digestive and wound healer. Heat-sensitive — must be cold-processed. In Sona: barely-there tropical softness that rounds the dryness without sweetening.',
+                story: 'Used in folk medicine across South and Southeast Asia for centuries as digestive and wound healer. Heat-sensitive — must be cold-processed. In Gold: barely-there tropical softness that rounds the dryness without sweetening.',
                 flavor: 'Softness without sweetness',
                 science: 'Proteolytic enzyme — digests proteins, reduces inflammation, prescribed post-surgery in European clinical practice.'
             }
@@ -102,7 +102,7 @@ const DRINKS = [
     {
         id: 'hara',
         number: '04',
-        name: 'Hara',
+        name: 'Sage',
         color: '#4A7A4E',
         textOnHero: '#FFFFFF',
         gems: 'Green · Emerald · Panna',
@@ -128,7 +128,7 @@ const DRINKS = [
     {
         id: 'narangi',
         number: '05',
-        name: 'Narangi',
+        name: 'Tsetal',
         color: '#D4723A',
         textOnHero: '#FFFFFF',
         gems: 'Orange · Amber · Gomed',
@@ -148,7 +148,7 @@ const DRINKS = [
     {
         id: 'gulaabi',
         number: '06',
-        name: 'Gulaabi',
+        name: 'Rose',
         color: '#D4899A',
         textOnHero: '#FFFFFF',
         gems: 'Pink · Rose Quartz · Celebratory Trio',
@@ -180,7 +180,7 @@ const DRINKS = [
     {
         id: 'baingani',
         number: '07',
-        name: 'Baingani',
+        name: 'Thistle',
         color: '#6B5490',
         textOnHero: '#FFFFFF',
         gems: 'Purple · Amethyst · Jamunia',
@@ -218,12 +218,12 @@ const DRINKS = [
     {
         id: 'mitti',
         number: '08',
-        name: 'Mitti',
+        name: 'Ahga/Tsa Ahga',
         color: '#8A6E5A',
         textOnHero: '#FFFFFF',
         gems: 'Brown · Smoky Quartz · Sphatik',
         tagline: 'South Indian filter coffee\'s best-kept secret is chicory.',
-        description: 'South Indian filter coffee\'s best-kept secret is chicory. Mitti takes that 200-year tradition, adds Ashwagandha KSM-66 and Chaga from Tibetan mountain medicine. Zero caffeine.',
+        description: 'South Indian filter coffee\'s best-kept secret is chicory. Ahga/Tsa Ahga takes that 200-year tradition, adds Ashwagandha KSM-66 and Chaga from Tibetan mountain medicine. Zero caffeine.',
         ingredientList: 'Roasted Chicory · Ashwagandha · Chaga · Ceylon Cinnamon',
         celebratory: false,
         ingredients: [
@@ -250,7 +250,7 @@ const DRINKS = [
     {
         id: 'ujla',
         number: '09',
-        name: 'Ujla',
+        name: 'Pearl',
         color: '#C8C4BC',
         textOnHero: '#1A1612',
         gems: 'Pearl · Moti · Celebratory Trio',
@@ -287,49 +287,49 @@ const SOURCING_DATA = [
         text: 'Ibn Sina\'s greatest liver medicine. South Indian filter coffee\'s secret for 200 years. 1.5g per can. Root fiber. No jargon needed.'
     },
     {
-        name: 'Roselle (Laal)',
+        name: 'Roselle (Elle)',
         region: 'Maharashtra · Tamil Nadu',
         text: 'Dried calyces from Nashik and Coimbatore. Cold-steeped 12 hours, concentrated 40%. The same flower is Gongura in Andhra, Mathipuli in Kerala, Bissap in Senegal.'
     },
     {
-        name: 'Amla (Laal, Narangi)',
+        name: 'Amla (Elle, Tsetal)',
         region: 'Pratapgarh, UP',
         text: 'Cold-pressed during the November–January harvest. The Amla festival — when farmers perform puja before harvest begins — is when we time our order. 150,000 tonnes from one district.'
     },
     {
-        name: 'Sea Buckthorn (Narangi)',
+        name: 'Sea Buckthorn (Tsetal)',
         region: 'Ladakh · LAHDC certified',
-        text: 'LAHDC-certified farmers in the Indus valley at 11,000 feet. Every Narangi can sold puts money in Ladakh. The Tibetan Gyushi prescribed it. The Indian Army planted it.'
+        text: 'LAHDC-certified farmers in the Indus valley at 11,000 feet. Every Tsetal can sold puts money in Ladakh. The Tibetan Gyushi prescribed it. The Indian Army planted it.'
     },
     {
-        name: 'Butterfly Pea (Neela)',
+        name: 'Butterfly Pea (Ternate)',
         region: 'Kerala · Tamil Nadu · Assam',
         text: 'Dried flowers, steeped at 60°C — never boiled. The Charaka Samhita\'s Medhya Rasayana. The flower that crosses the blood-brain barrier.'
     },
     {
-        name: 'Jamun (Baingani, Gulaabi)',
+        name: 'Jamun (Thistle, Rose)',
         region: 'UP · MP · June–July only',
         text: 'Three weeks in season. Cold-press, freeze immediately. The Ramayana\'s forest fruit. Prescribed for diabetes 2,000 years before jamboline was isolated.'
     },
     {
-        name: 'Kokum (Baingani)',
+        name: 'Kokum (Thistle)',
         region: 'Sindhudurg · Konkan coast',
         text: 'Sun-dried rind from Sindhudurg farmer groups. The souring agent of an entire coastal civilization. Grows nowhere else on earth at commercial scale.'
     },
     {
-        name: 'Rose Water (Gulaabi)',
+        name: 'Rose Water (Rose)',
         region: 'Kannauj, UP · 400 years',
         text: 'Food-grade distilled from Kannauj attar makers — copper degs unchanged since the Mughal era. Not synthetic. Never. Kannauj or nothing.'
     },
     {
-        name: 'Lychee (Gulaabi)',
+        name: 'Lychee (Rose)',
         region: 'Muzaffarpur, Bihar · GI certified',
         text: 'Shahi Lychee, GI protected. Two weeks in June. The same geraniol and nerol molecules that make lychee taste like champagne are in the Kannauj roses. Chemistry, not coincidence.'
     },
     {
-        name: 'Nannari (Ujla)',
+        name: 'Nannari (Pearl)',
         region: 'Tamil Nadu · Kerala forests',
-        text: 'Dried root from Siddha herb suppliers in Chennai. Made into syrup in-house — boiled, double-strained through muslin, reduced. The proprietary nannari syrup cannot be outsourced at the quality Ujla demands.'
+        text: 'Dried root from Siddha herb suppliers in Chennai. Made into syrup in-house — boiled, double-strained through muslin, reduced. The proprietary nannari syrup cannot be outsourced at the quality Pearl demands.'
     },
     {
         name: 'Ashwagandha KSM-66',
