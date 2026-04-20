@@ -88,6 +88,14 @@
     --bg-hero: #F5F0E6; 
     --text-hero-primary: #1A1612;
     --text-hero-secondary: #5A5048;
+
+    /* Themed section surfaces */
+    --bg-explorer: #EBE4D4;
+    --text-explorer-primary: #1A1612;
+    --text-explorer-secondary: #5A5048;
+    --text-explorer-title: #8A6820;
+    --bg-big-quote: #EBE4D4;
+    --text-big-quote: #1A1612;
 }
 
 /* ---- DARK MODE ---- */
@@ -153,6 +161,14 @@
     --bg-hero: #0D0B08;
     --text-hero-primary: #F0E8D8;
     --text-hero-secondary: #B8AA90;
+
+    /* Themed section surfaces */
+    --bg-explorer: #0D0B08;
+    --text-explorer-primary: #F0E8D8;
+    --text-explorer-secondary: #B8AA90;
+    --text-explorer-title: #F5E9C0;
+    --bg-big-quote: #0D0B08;
+    --text-big-quote: #F0E8D8;
 }
 
 /* Theme transition on all themed elements */

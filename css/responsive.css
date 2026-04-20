@@ -139,7 +139,7 @@
 
     .hero__title {
         font-size: 2.6rem !important;
-        color: #000000 !important; /* Force true black for maximum visibility */
+        color: var(--text-hero-primary) !important;
         margin-top: 10px !important;
         line-height: 1.1 !important;
         font-weight: 500 !important;
@@ -148,11 +148,11 @@
     }
 
     [data-theme="dark"] .hero__title {
-        color: #F0E8D8 !important;
+        color: var(--text-hero-primary) !important;
     }
 
     .hero__subtitle {
-        color: #2D2620 !important; /* Darker charcoal */
+        color: var(--text-hero-secondary) !important;
         opacity: 1 !important;
         font-size: 1.05rem !important;
         line-height: 1.6 !important;
@@ -162,11 +162,11 @@
     }
 
     [data-theme="dark"] .hero__subtitle {
-        color: #B8AA90 !important;
+        color: var(--text-hero-secondary) !important;
     }
 
     .eyebrow {
-        color: #8A6820 !important; /* Darker gold for visibility */
+        color: var(--gold-accent) !important;
         opacity: 1 !important;
         font-weight: 500 !important;
     }

@@ -451,7 +451,7 @@
 
 /* ---- INGREDIENT EXPLORER ---- */
 .explorer {
-    background: var(--bg-dark);
+    background: var(--bg-explorer);
     min-height: 100vh;
     display: flex;
     position: relative;
@@ -474,7 +474,7 @@
 .explorer__sidebar-title {
     font-family: var(--font-display);
     font-size: 1.2rem;
-    color: var(--gold-text-on-dark);
+    color: var(--text-explorer-title);
     margin-bottom: 32px;
 }
 
@@ -496,13 +496,13 @@
     font-family: var(--font-body);
     font-weight: 400;
     font-size: 1rem;
-    color: var(--text-on-dark-secondary);
+    color: var(--text-explorer-secondary);
 }
 
 .explorer__drink-item:hover,
 .explorer__drink-item.active {
     background: rgba(201, 168, 76, 0.08);
-    color: var(--text-on-dark);
+    color: var(--text-explorer-primary);
 }
 
 .explorer__drink-dot {
@@ -550,7 +550,7 @@
     font-weight: 300;
     font-style: italic;
     font-size: 1.15rem;
-    color: var(--text-on-dark-secondary);
+    color: var(--text-explorer-secondary);
     margin-bottom: 8px;
 }
 
@@ -559,7 +559,7 @@
     font-size: 0.65rem;
     letter-spacing: 0.15em;
     text-transform: uppercase;
-    color: var(--text-on-dark-secondary);
+    color: var(--text-explorer-secondary);
     margin-bottom: 28px;
 }
 
@@ -567,7 +567,7 @@
     font-family: var(--font-body);
     font-weight: 300;
     font-size: 1.1rem;
-    color: var(--text-on-dark-secondary);
+    color: var(--text-explorer-secondary);
     line-height: 1.9;
     margin-bottom: 40px;
 }
@@ -607,7 +607,7 @@
 .ingredient-card__name {
     font-family: var(--font-display);
     font-size: 1.1rem;
-    color: var(--text-on-dark);
+    color: var(--text-explorer-primary);
 }
 
 .ingredient-card__toggle {
@@ -644,7 +644,7 @@
     font-family: var(--font-body);
     font-weight: 300;
     font-size: 0.95rem;
-    color: var(--text-on-dark-secondary);
+    color: var(--text-explorer-secondary);
     line-height: 1.8;
     margin-bottom: 16px;
 }
@@ -675,7 +675,7 @@
     font-family: var(--font-body);
     font-weight: 300;
     font-size: 0.9rem;
-    color: var(--text-on-dark-secondary);
+    color: var(--text-explorer-secondary);
     line-height: 1.6;
 }
 
@@ -975,7 +975,7 @@
 
 /* ---- BIG QUOTE ---- */
 .big-quote {
-    background: var(--bg-dark);
+    background: var(--bg-big-quote);
     padding: clamp(100px, 14vw, 200px) 0;
     text-align: center;
 }
@@ -984,7 +984,7 @@
     font-family: var(--font-display);
     font-style: italic;
     font-size: clamp(2rem, 5vw, 4.5rem);
-    color: var(--text-on-dark);
+    color: var(--text-big-quote);
     line-height: 1.2;
     max-width: 900px;
     margin: 0 auto;
