@@ -3,6 +3,9 @@
    ============================================ */
 
 document.addEventListener('DOMContentLoaded', () => {
+    const isSafari = isSafariBrowser();
+    document.documentElement.classList.toggle('is-safari', isSafari);
+
     // Build dynamic sections
     buildNavratnaGrid();
     buildDrinkList();
@@ -13,7 +16,9 @@ document.addEventListener('DOMContentLoaded', () => {
     selectDrink(0);
 
     // Init Three.js scenes
-    SynThree.initHeroPrism('heroPrism');
+    if (!isSafari) {
+        SynThree.initHeroPrism('heroPrism');
+    }
 
     // Init GSAP animations
     SynAnimations.init();
@@ -27,6 +32,13 @@ document.addEventListener('DOMContentLoaded', () => {
     // Waitlist forms
     initWaitlistForms();
 });
+
+function isSafariBrowser() {
+    const ua = navigator.userAgent;
+    const isSafariEngine = /Safari/i.test(ua) && !/Chrome|CriOS|Chromium|Android|Edg|OPR|FxiOS/i.test(ua);
+    const isIOSWebKit = /iPad|iPhone|iPod/i.test(ua) && /WebKit/i.test(ua);
+    return isSafariEngine || isIOSWebKit;
+}
 
 /* ---- Build Navratna Hex Grid ---- */
 function buildNavratnaGrid() {

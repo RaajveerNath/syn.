@@ -244,6 +244,28 @@
     pointer-events: none;
 }
 
+/* Safari fallback: avoid WebGL canvas compositing washout on hero */
+.is-safari .hero__prism {
+    background: radial-gradient(
+        circle at center,
+        rgba(201, 168, 76, 0.14) 0%,
+        rgba(201, 168, 76, 0.08) 35%,
+        rgba(201, 168, 76, 0) 72%
+    );
+}
+
+.is-safari .hero__prism canvas {
+    display: none !important;
+}
+
+.is-safari .hero__content,
+.is-safari .hero__title,
+.is-safari .hero__subtitle,
+.is-safari .hero__waitlist-label,
+.is-safari .hero .btn {
+    opacity: 1 !important;
+}
+
 .hero__scroll {
     position: absolute;
     right: clamp(24px, 4vw, 60px);

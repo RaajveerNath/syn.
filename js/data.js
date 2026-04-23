@@ -218,12 +218,12 @@ const DRINKS = [
     {
         id: 'mitti',
         number: '08',
-        name: 'Ahga/Tsa Ahga',
+        name: 'Ahga',
         color: '#8A6E5A',
         textOnHero: '#FFFFFF',
         gems: 'Brown · Smoky Quartz · Sphatik',
         tagline: 'South Indian filter coffee\'s best-kept secret is chicory.',
-        description: 'South Indian filter coffee\'s best-kept secret is chicory. Ahga/Tsa Ahga takes that 200-year tradition, adds Ashwagandha KSM-66 and Chaga from Tibetan mountain medicine. Zero caffeine.',
+        description: 'South Indian filter coffee\'s best-kept secret is chicory. Ahga takes that 200-year tradition, adds Ashwagandha KSM-66 and Chaga from Tibetan mountain medicine. Zero caffeine.',
         ingredientList: 'Roasted Chicory · Ashwagandha · Chaga · Ceylon Cinnamon',
         celebratory: false,
         ingredients: [
