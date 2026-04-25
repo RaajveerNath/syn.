@@ -180,7 +180,7 @@ const DRINKS = [
     {
         id: 'baingani',
         number: '07',
-        name: 'Thistle',
+        name: 'Soma',
         color: '#6B5490',
         textOnHero: '#FFFFFF',
         gems: 'Purple · Amethyst · Jamunia',
@@ -307,12 +307,12 @@ const SOURCING_DATA = [
         text: 'Dried flowers, steeped at 60°C — never boiled. The Charaka Samhita\'s Medhya Rasayana. The flower that crosses the blood-brain barrier.'
     },
     {
-        name: 'Jamun (Thistle, Rose)',
+        name: 'Jamun (Soma, Rose)',
         region: 'UP · MP · June–July only',
         text: 'Three weeks in season. Cold-press, freeze immediately. The Ramayana\'s forest fruit. Prescribed for diabetes 2,000 years before jamboline was isolated.'
     },
     {
-        name: 'Kokum (Thistle)',
+        name: 'Kokum (Soma)',
         region: 'Sindhudurg · Konkan coast',
         text: 'Sun-dried rind from Sindhudurg farmer groups. The souring agent of an entire coastal civilization. Grows nowhere else on earth at commercial scale.'
     },
